@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+       {% include "model_header.html" %}
+    </head>
+
+    <body class="fundo" >
+        <div class="conteiner_agenda_div2_img">
+
+            <img src="{% static 'img/agenda.png' %}">
+        </div>
+
+
+        {% block content %} {% endblock %}
+
+        
+        {% include "model_footer.html" %}
+        
+    </body>
+</html>

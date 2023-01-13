@@ -1,0 +1,53 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>                                       
+
+    <body>
+        
+        <div class="conteiner_login">
+            <div class="conteiner_login_div1_cor"></div>
+            <div class="conteiner_login_div2_img">
+                <img src="{% static 'img/agd_personalizada.jpg' %}">
+            </div>
+
+        </div>
+        <div class="box_login">
+            <form action="submit" method="POST"> {% csrf_token %}
+                <div >
+                    <h1>Login</h1>
+                    
+                    <div class="form_login_div">
+                        <div class="form_login">
+                            <i class="bi bi-person"></i>
+                            <input type="text" name="username">
+                        </div>
+                      
+                        <div class="form_login">
+                            <i class="bi bi-key"></i>
+                        <input type="password" name="password">
+                        </div>
+                        
+                        <div class="form_login">
+                            <button type="submit">Entrar</button>
+                        </div>
+                        
+                    </div>
+                    <div align="center">
+                        {% for message in messages %}
+                            <strong>Erro</strong> {{message}}
+                        {% endfor %}
+                    </div>
+            
+                </div>
+            
+            </form>
+        
+        </div>
+    </body>
+</html>
