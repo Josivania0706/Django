@@ -22,33 +22,28 @@ height: 90%;
     font-size: 45px;
     text-align: center;
 }
-.divagenda{
-overflow: auto;
-font-size: 30px;
 
-position: absolute;
-left: 50%;
-bottom: 19%;
-  width: 32%;
-  height: 50%;
-
-}
 li{
     padding-bottom: 8px;
     list-style-type:square;
 }
 i{
  text-align: center;
-   font-size: 200px;
+ color: black;
+ 
+}
+a{
+  color: black;
+  width: 10px;
 }
 .divagenda1{
+
     overflow: auto;
     font-size: 30px;
     
     position: absolute;
-    left: 25%;
     bottom: 19%;
-      width: 35%;
+      width: 50%;
       height: 50%;
     
-    }
+}

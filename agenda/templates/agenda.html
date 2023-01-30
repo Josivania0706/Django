@@ -1,16 +1,13 @@
 {% extends "model_page.html" %}
 
 {% block content %}
+
 <div class="divagenda1">
-    <h2>Agendamentos</h2>
+    
     <a href="evento/"> 
+       
         <button type="button">Adicionar</button>
     </a>
-       
-    <i class="bi bi-calendar2-week"></i>
-</div>
-
-<div class="divagenda">
     <ul>
         {% for evento in eventos %}
             <li>
@@ -18,8 +15,9 @@
                             style= "color:red"
                      {% endif %}>
                     {{evento.titulo}} - {{evento.get_data_evento}}
-                    (<a href="evento/?id={{evento.id}}">Editar</a> /
-                    <a href="evento/delete/{{evento.id}}/">Excluir</a> )
+                
+                    <a href="evento/?id={{evento.id}}" ><i style="font-size: 25px " class="bi bi-pen "></i></a> 
+                    <a href="evento/delete/{{evento.id}}/"><i style="font-size: 25px" class="bi bi-x-circle"></i></a> 
                 </div>
                  </li>
         {% endfor%}

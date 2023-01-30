@@ -1,6 +1,7 @@
 {% extends "model_page.html" %}
 
 {% block content %}
+<div class="divagenda1">
     <h1>Evento</h1>
     <form action="submit" method="POST">{% csrf_token %}
         <label>Título</label>
@@ -20,5 +21,7 @@
             <button type="button">Cancelar</button>
         </a>
     </form>
+</div>
+
 
 {% endblock%}
